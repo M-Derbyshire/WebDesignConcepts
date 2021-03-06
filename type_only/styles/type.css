@@ -1,0 +1,20 @@
+/* Define fonts */
+@font-face {
+	font-family: futura;
+	src: url(../fonts/unicode.futurab.ttf);
+}
+
+@font-face {
+	font-family: futuraBook;
+	src: url(../fonts/Futura_Book.ttf);
+}
+
+
+/* Add type styling */
+body {
+	font-family: futuraBook;
+}
+
+header, h3 {
+	font-family: futura;
+}
