@@ -91,9 +91,13 @@
 			
 			<form method="post" action="#">
 				
+				<!-- 
+					the "textInputWrapper" div is here because before/after 
+					psuedo-elements wont display on text inputs
+				-->
 				<div class="inputArea">
 					<label for="name">Name: </label>
-					<input type="text" id="name" name="name" />
+					<div class="textInputWrapper"><input type="text" id="name" name="name" /></div>
 				</div>
 				
 				<div class="inputArea">

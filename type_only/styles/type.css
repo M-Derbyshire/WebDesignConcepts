@@ -9,6 +9,11 @@
 	src: url(../fonts/Futura_Book.ttf);
 }
 
+@font-face {
+	font-family: courierPrime;
+	src: url(../fonts/Courier_Prime.ttf);
+}
+
 
 /* Add type styling */
 body {

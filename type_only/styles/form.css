@@ -1,0 +1,34 @@
+.inputArea {
+	margin: 1em;
+}
+
+/* 
+	Add square brackets around the input textboxes, to add a font-based shape to them, 
+	and take away the default borders.
+	
+	The .textInputWrapper is used because before/after psuedo-elements will not display
+	on text inputs
+*/
+.textInputWrapper {
+	display: inline-block;
+}
+
+.textInputWrapper::before {
+	content: "[";
+}
+
+.textInputWrapper::after {
+	content: "]";
+}
+
+.textInputWrapper::before, .textInputWrapper::after {
+	font-family: courierPrime;
+	font-weight: bold;
+	font-size: large;
+}
+
+input[type="text"], input[type="text"]:focus {
+	border-width: 0;
+	outline: none;
+	font-family: courierPrime;
+}
