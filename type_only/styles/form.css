@@ -89,7 +89,7 @@ input[type="checkbox"]:not(:checked)::first-letter {
 	color: #aaa;
 }
 
-input[type="checkbox"]:hover::first-letter {
+input[type="checkbox"]:not(:checked):hover::first-letter {
 	color: #888;
 }
 
