@@ -2,6 +2,8 @@
 	margin: 1em;
 }
 
+
+
 /* 
 	Add square brackets around the input textboxes, to add a font-based shape to them, 
 	and take away the default borders.
@@ -34,6 +36,7 @@ input[type="text"], input[type="text"]:focus {
 }
 
 
+
 /* 
 	Remove the border around text area, and add a left/right to the text area 
 	in type. Unfortunately, the left/right are coupled to the text areas rows value, 
@@ -63,4 +66,51 @@ textarea:focus {
 .textareaWrapper:after {
 	/* Makes the right border look better, as the pipes stay on the outside of any other characters */
 	text-align: right;
+}
+
+
+
+/* 
+	Style the checkboxes by hiding them, then using a psuedo-element in it's place for display
+*/
+input[type="checkbox"] {
+	visibility: hidden;
+	font-family: courierPrime;
+	font-weight: bold;
+}
+
+/* 
+	The 'x' within the checkbox will be grey when unchecked.
+	To make this work (since preceding/proceeding punctuation is 
+	included in ::first-letter), the 'x' is the first letter of ::before, 
+	and then the display direction is reversed, so it shows last.
+*/
+input[type="checkbox"]:not(:checked)::first-letter {
+	color: #aaa;
+}
+
+input[type="checkbox"]:hover::first-letter {
+	color: #888;
+}
+
+input[type="checkbox"]::before {
+	visibility: visible;
+	content: "x ]";
+	
+	/* Reverse the text */
+	direction: rtl;
+	unicode-bidi: bidi-override;
+	
+	/* 
+		We need the space character, as any proceeding punctuation (']') would be included in ::after.
+		However, we then remove the gap made by that space character, so only the x gets the ::after 
+		styling.
+	*/
+	white-space: pre;
+	word-spacing: -0.65em;
+}
+
+input[type="checkbox"]::after {
+	content: "]";
+	visibility: visible;
 }
