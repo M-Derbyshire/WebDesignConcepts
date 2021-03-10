@@ -92,8 +92,8 @@
 			<form method="post" action="#">
 				
 				<!-- 
-					the "textInputWrapper" div is here because before/after 
-					psuedo-elements wont display on text inputs
+					the wrapper divs are here because before/after 
+					psuedo-elements wont display on some inputs
 				-->
 				<div class="inputArea">
 					<label for="name">Name: </label>
@@ -102,7 +102,9 @@
 				
 				<div class="inputArea">
 					<label for="description">Description: </label><br />
-					<textarea id="description" name="description" >Default text</textarea>
+					<div class="textareaWrapper">
+						<textarea id="description" name="description" rows="10" cols="40" >Default text</textarea>
+					</div>
 				</div>
 				
 				<div class="inputArea">

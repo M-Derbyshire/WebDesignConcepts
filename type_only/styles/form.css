@@ -32,3 +32,35 @@ input[type="text"], input[type="text"]:focus {
 	outline: none;
 	font-family: courierPrime;
 }
+
+
+/* 
+	Remove the border around text area, and add a left/right to the text area 
+	in type. Unfortunately, the left/right are coupled to the text areas rows value, 
+	however this can be decoupled with JS in the future
+*/
+textarea {
+	border-width: 0;
+	font-family: courierPrime;
+	resize: none;
+}
+
+textarea:focus {
+	outline: none;
+}
+
+.textareaWrapper {
+	font-weight: bold;
+	display: inline-block;
+}
+
+.textareaWrapper:before, .textareaWrapper:after {
+	content: "+\A|\A|\A|\A|\A|\A|\A|\A|\A+";
+	white-space: pre;
+	display: inline-block;
+}
+
+.textareaWrapper:after {
+	/* Makes the right border look better, as the pipes stay on the outside of any other characters */
+	text-align: right;
+}
