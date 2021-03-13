@@ -71,9 +71,10 @@ textarea:focus {
 
 
 /* 
-	Style the checkboxes by hiding them, then using a psuedo-element in it's place for display
+	Style the checkboxes (and some of the radio button styling to) by hiding them, then using a 
+	psuedo-element in it's place for display.
 */
-input[type="checkbox"] {
+input[type="checkbox"], input[type="radio"] {
 	visibility: hidden;
 	font-family: courierPrime;
 	font-weight: bold;
@@ -85,17 +86,25 @@ input[type="checkbox"] {
 	included in ::first-letter), the 'x' is the first letter of ::before, 
 	and then the display direction is reversed, so it shows last.
 */
-input[type="checkbox"]:not(:checked)::first-letter {
+input[type="checkbox"]:not(:checked)::first-letter, input[type="radio"]:not(:checked)::first-letter {
 	color: #aaa;
 }
 
-input[type="checkbox"]:not(:checked):hover::first-letter {
+input[type="checkbox"]:not(:checked):hover::first-letter, input[type="radio"]:not(:checked):hover::first-letter {
 	color: #888;
 }
 
 input[type="checkbox"]::before {
-	visibility: visible;
 	content: "x ]";
+}
+
+input[type="checkbox"]::after {
+	content: "]";
+	visibility: visible;
+}
+
+input[type="checkbox"]::before, input[type="radio"]::before {
+	visibility: visible;
 	
 	/* Reverse the text */
 	direction: rtl;
@@ -110,7 +119,24 @@ input[type="checkbox"]::before {
 	word-spacing: -0.65em;
 }
 
-input[type="checkbox"]::after {
-	content: "]";
+
+/* 
+	The rest of the radio button styling. See the checkbox styling above, as this works in the same way, 
+	and some of that styling is shared with the radio buttons
+*/
+input[type="radio"]::before {
+	content: "o )";
+}
+
+input[type="radio"]::after {
+	content: ")";
 	visibility: visible;
+}
+
+.radioButtonSelection label {
+	margin-left: 0.5em;
+}
+
+.radioButtonSelection h4 {
+	margin-bottom: 0.5em;
 }
