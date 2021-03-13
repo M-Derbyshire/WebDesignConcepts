@@ -111,8 +111,8 @@ input[type="checkbox"]::before, input[type="radio"]::before {
 	unicode-bidi: bidi-override;
 	
 	/* 
-		We need the space character, as any proceeding punctuation (']') would be included in ::after.
-		However, we then remove the gap made by that space character, so only the x gets the ::after 
+		We need the space character, as any proceeding punctuation (']') would be included in ::first-letter.
+		However, we then remove the gap made by that space character, so only the x gets the ::first-letter 
 		styling.
 	*/
 	white-space: pre;
