@@ -140,3 +140,33 @@ input[type="radio"]::after {
 .radioButtonSelection h4 {
 	margin-bottom: 0.5em;
 }
+
+
+/* 
+	Styling the submit button
+*/
+button[type="submit"] {
+	font-family: futuraBook;
+	font-weight: bolder;
+	font-size: 1em;
+	border-width: 0;
+	outline: none;
+	background-color: unset;
+}
+
+button[type="submit"]:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+button[type="submit"]:active {
+	font-weight: normal;
+}
+
+button[type="submit"]::before {
+	content: "[ ";
+}
+
+button[type="submit"]::after {
+	content: " ]";
+}
