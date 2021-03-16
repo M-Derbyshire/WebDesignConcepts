@@ -124,8 +124,12 @@ input[type="checkbox"]::before, input[type="radio"]::before {
 	The rest of the radio button styling. See the checkbox styling above, as this works in the same way, 
 	and some of that styling is shared with the radio buttons
 */
-input[type="radio"]::before {
+input[type="radio"]:not(:checked)::before {
 	content: "o )";
+}
+
+input[type="radio"]:checked::before {
+	content: "+ )";
 }
 
 input[type="radio"]::after {
