@@ -78,6 +78,7 @@ input[type="checkbox"], input[type="radio"] {
 	visibility: hidden;
 	font-family: courierPrime;
 	font-weight: bold;
+	cursor: pointer;
 }
 
 /* 
