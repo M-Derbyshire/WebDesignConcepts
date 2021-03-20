@@ -3,3 +3,14 @@ header {
 	min-height: 20vh;
 	padding: 30vh 0 50vh 2em ;
 }
+
+/* Section elements */
+#informationArea {
+	margin-bottom: 35vh;
+}
+
+section {
+	margin-left: 5vw;
+	margin-bottom: 10vh;
+	width: 70vw;
+}
