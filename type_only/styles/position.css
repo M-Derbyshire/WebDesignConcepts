@@ -6,11 +6,26 @@ header {
 
 /* Section elements */
 #informationArea {
-	margin-bottom: 35vh;
+	margin-bottom: 15vh;
+	margin-left: 5vw;
+	width: 70vw;
 }
 
 section {
+	margin-bottom: 10vh;
+}
+
+/* Tables */
+/* Need to give this a scrollbar in case of overflow */
+#tableArea {
 	margin-left: 5vw;
 	margin-bottom: 10vh;
-	width: 70vw;
+}
+
+#tableArea table {
+	table-layout: fixed;
+}
+
+#tableArea th {
+	min-width:max-content;
 }

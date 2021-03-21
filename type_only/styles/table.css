@@ -1,6 +1,5 @@
 table {
 	border-collapse: collapse;
-	margin: 2em;
 }
 
 td, th {
@@ -11,8 +10,10 @@ td, th {
 /* Need to add a seperator to the table cells */
 th::before {
 	content: "[ ";
+	display: inline;
 }
 
 th::after {
 	content: " ]";
+	display: inline;
 }
