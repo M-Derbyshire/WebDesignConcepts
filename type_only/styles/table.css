@@ -10,10 +10,10 @@ td, th {
 /* Need to add a seperator to the table cells */
 th::before {
 	content: "[ ";
-	display: inline;
+	display: inline-block;
 }
 
 th::after {
 	content: " ]";
-	display: inline;
+	display: inline-block;
 }
