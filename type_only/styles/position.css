@@ -29,3 +29,17 @@ section {
 #tableArea th {
 	min-width:max-content;
 }
+
+
+/* Smaller screen adjustments */
+@media (max-width: 650px) {
+	
+	#informationArea {
+		margin-right: 5vw;
+		width: 85vw;
+	}
+	
+	th {
+		font-size: small;
+	}
+}
