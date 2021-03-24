@@ -6,7 +6,7 @@ header {
 
 /* Section elements */
 #informationArea {
-	margin-bottom: 15vh;
+	margin-bottom: 25vh;
 	margin-left: 5vw;
 	width: 70vw;
 }
@@ -16,7 +16,6 @@ section {
 }
 
 /* Tables */
-/* Need to give this a scrollbar in case of overflow */
 #tableArea {
 	margin-left: 5vw;
 	margin-bottom: 10vh;
@@ -31,6 +30,25 @@ section {
 }
 
 
+/* Forms */
+form {
+	margin: 5vw;
+}
+
+.inputArea {
+	margin: 2em 0;
+}
+
+.textareaWrapper {
+	width: 70vw;
+}
+
+textarea {
+	width:60vw;
+	max-width: 500px;
+}
+
+
 /* Smaller screen adjustments */
 @media (max-width: 650px) {
 	
@@ -38,4 +56,15 @@ section {
 		margin-right: 5vw;
 		width: 85vw;
 	}
+	
+	
+	textarea {
+		width: 50vw;
+	}
+	
+	.textareaWrapper {
+		width: 65vw;
+	}
+	
+	
 }
