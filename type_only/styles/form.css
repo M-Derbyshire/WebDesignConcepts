@@ -196,3 +196,16 @@ button[type="submit"]::after {
 		font-size: 1.5em;
 	}
 }
+
+
+@media (max-width: 325px) {
+	
+	/* 
+		On Galaxy Fold, the md-developer.uk label was 
+		on a new line to the radio button, due to the size 
+		of the text. Therefore, make it smaller.
+	*/
+	.radioButtonSelection {
+		font-size: 1.25em;
+	}
+}
