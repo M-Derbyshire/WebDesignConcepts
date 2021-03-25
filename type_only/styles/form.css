@@ -190,7 +190,6 @@ button[type="submit"]::after {
 		/* These are needed to vertically align the box with the label */
 		display: inline-block;
 		vertical-align: top;
-		margin-top: 0;
 	}
 	
 	button[type="submit"] {

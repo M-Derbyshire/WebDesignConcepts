@@ -66,5 +66,10 @@ textarea {
 		width: 65vw;
 	}
 	
+	input[type="radio"], .radioButtonSelection label {
+		/* Give a bit more space between all the radio buttons, for easier selection */
+		margin-top: 0.5em;
+		display: inline-block;
+	}
 	
 }
