@@ -16,10 +16,18 @@
 
 
 /* Add type styling */
-body {
+body, footer, a {
 	font-family: futuraBook;
 }
 
 header, h3, h4 {
 	font-family: futura;
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	color: #888;
 }
