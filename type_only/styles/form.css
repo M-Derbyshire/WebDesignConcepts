@@ -80,6 +80,11 @@ input[type="checkbox"], input[type="radio"] {
 	cursor: pointer;
 }
 
+input[type="radio"] {
+	/* Without this, the radio button overlaps the label */
+	margin-right: 1.5em;
+}
+
 /* 
 	The 'x' within the checkbox will be grey when unchecked.
 	To make this work (since preceding/proceeding punctuation is 
@@ -137,10 +142,6 @@ input[type="radio"]::after {
 	visibility: visible;
 }
 
-.radioButtonSelection label {
-	margin-left: 0.5em;
-}
-
 .radioButtonSelection h4 {
 	margin-bottom: 0.5em;
 }
@@ -173,4 +174,23 @@ button[type="submit"]::before {
 
 button[type="submit"]::after {
 	content: " ]";
+}
+
+
+/* Some smaller screen corrections */
+@media (max-width: 650px) {
+	
+	.checkboxArea, .radioButtonSelection {
+		font-size: 1.5em;
+	}
+	
+	input[type="radio"], input[type="checkbox"] {
+		font-size: 1em;
+		
+		/* These are needed to vertically align the box with the label */
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 0;
+	}
+	
 }
