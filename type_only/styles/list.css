@@ -1,0 +1,23 @@
+ul {
+	padding-left: 1.5em;
+	padding-top: 0;
+}
+
+li {
+	list-style-type: none;
+	padding: 0.25em 0;
+}
+
+
+/* Replacement for the list marker */
+/* Not using ::marker as it isn't well supported */
+li::before {
+	content: ">";
+	font-weight: bold;
+	padding-right: 0.5em;
+}
+
+/* Replace the list marker again for the nested lists */
+li li::before {
+	content: "-";
+}

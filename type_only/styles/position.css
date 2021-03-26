@@ -4,6 +4,7 @@ header {
 	padding: 30vh 0 50vh 2em ;
 }
 
+
 /* Section elements */
 #informationArea {
 	margin-bottom: 25vh;
@@ -13,20 +14,6 @@ header {
 
 section {
 	margin-bottom: 10vh;
-}
-
-/* Tables */
-#tableArea {
-	margin-left: 5vw;
-	margin-bottom: 10vh;
-}
-
-#tableArea table {
-	table-layout: fixed;
-}
-
-#tableArea th {
-	min-width:max-content;
 }
 
 
