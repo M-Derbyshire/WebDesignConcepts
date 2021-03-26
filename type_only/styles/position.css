@@ -7,7 +7,6 @@ header {
 
 /* Section elements */
 #informationArea {
-	margin-bottom: 25vh;
 	margin-left: 5vw;
 	width: 70vw;
 }
@@ -19,7 +18,7 @@ section {
 
 /* Forms */
 form {
-	margin: 5vw;
+	margin: 25vh 5vw 0 5vw;
 }
 
 .inputArea {
