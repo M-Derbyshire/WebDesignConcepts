@@ -5,6 +5,11 @@
 }
 
 @font-face {
+	font-family: futuraHeavy;
+	src: url(../fonts/Futura_Heavy.ttf);
+}
+
+@font-face {
 	font-family: futuraBook;
 	src: url(../fonts/Futura_Book.ttf);
 }
@@ -20,8 +25,12 @@ body, footer, a {
 	font-family: futuraBook;
 }
 
-header, h3, h4 {
+h1 {
 	font-family: futura;
+}
+
+h2, h3, h4, h5, h6 {
+	font-family: futuraHeavy;
 }
 
 a {
