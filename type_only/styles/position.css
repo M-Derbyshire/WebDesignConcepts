@@ -1,7 +1,7 @@
 /* Heading */
 header {
 	min-height: 20vh;
-	padding: 30vh 0 50vh 2em ;
+	padding: 30vh 2em 50vh 2em ;
 }
 
 
@@ -37,6 +37,11 @@ textarea {
 
 /* Smaller screen adjustments */
 @media (max-width: 650px) {
+	
+	header {
+		padding-left: 1em;
+		padding-right: 2em;
+	}
 	
 	#informationArea {
 		margin-right: 5vw;
