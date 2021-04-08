@@ -7,25 +7,25 @@
 */
 .textInputWrapper {
 	display: inline-block;
+	
+	&::before, &::after {
+		font-family: courierPrime;
+		font-weight: bold;
+		font-size: large;
+		display: inline-block;
+	}
+	
+	&::before {
+		content: "[";
+	}
+	
+	&::after {
+		content: "]";
+	}
 }
 
-.textInputWrapper::before {
-	content: "[";
-	display: inline-block;
-}
 
-.textInputWrapper::after {
-	content: "]";
-	display: inline-block;
-}
-
-.textInputWrapper::before, .textInputWrapper::after {
-	font-family: courierPrime;
-	font-weight: bold;
-	font-size: large;
-}
-
-input[type="text"], input[type="text"]:focus {
+input[type="text"] {
 	border-width: 0;
 	outline: none;
 	font-family: courierPrime;
@@ -45,26 +45,21 @@ textarea {
 	border-width: 0;
 	font-family: courierPrime;
 	resize: none;
-}
-
-textarea:focus {
-	outline: none;
+	
+	&:focus {
+		outline: none;
+	}
 }
 
 .textareaWrapper {
 	font-weight: bold;
 	display: inline-block;
-}
-
-.textareaWrapper:before, .textareaWrapper:after {
-	content: "+\A\A\A\A\A\A\A\A\A+";
-	white-space: pre;
-	display: inline-block;
-}
-
-.textareaWrapper:after {
-	/* Makes the right border look better, as the pipes stay on the outside of any other characters */
-	text-align: right;
+	
+	&::before, &::after {
+		content: "+\A\A\A\A\A\A\A\A\A+";
+		white-space: pre;
+		display: inline-block;
+	}
 }
 
 
@@ -78,68 +73,69 @@ input[type="checkbox"], input[type="radio"] {
 	font-family: courierPrime;
 	font-weight: bold;
 	cursor: pointer;
-}
-
-input[type="radio"] {
-	/* Without this, the radio button overlaps the label */
-	margin-right: 1.5em;
-}
-
-/* 
+	
+	
+	/* 
 	The 'x' within the checkbox will be grey when unchecked.
 	To make this work (since preceding/proceeding punctuation is 
 	included in ::first-letter), the 'x' is the first letter of ::before, 
 	and then the display direction is reversed, so it shows last.
-*/
-input[type="checkbox"]:not(:checked)::first-letter, input[type="radio"]:not(:checked)::first-letter {
-	color: #aaa;
-}
-
-input[type="checkbox"]:not(:checked):hover::first-letter, input[type="radio"]:not(:checked):hover::first-letter {
-	color: $interactionHoverColor;
-}
-
-input[type="checkbox"]::before {
-	content: "x ]";
-}
-
-input[type="checkbox"]::after {
-	content: "]";
-	visibility: visible;
-}
-
-input[type="checkbox"]::before, input[type="radio"]::before {
-	visibility: visible;
-	
-	/* Reverse the text */
-	direction: rtl;
-	unicode-bidi: bidi-override;
-	
-	/* 
-		We need the space character, as any proceeding punctuation (']') would be included in ::first-letter.
-		However, we then remove the gap made by that space character, so only the x gets the ::first-letter 
-		styling.
 	*/
-	white-space: pre;
-	word-spacing: -0.65em;
+	&:not(:checked)::first-letter {
+		color: #aaa;
+	}
+	
+	&:not(:checked):hover::first-letter {
+		color: $interactionHoverColor;
+	}
+	
+	&::before {
+		visibility: visible;
+		
+		/* Reverse the text */
+		direction: rtl;
+		unicode-bidi: bidi-override;
+		
+		/* 
+			We need the space character, as any proceeding punctuation (']') would be included in ::first-letter.
+			However, we then remove the gap made by that space character, so only the x gets the ::first-letter 
+			styling.
+		*/
+		white-space: pre;
+		word-spacing: -0.65em;
+	}
 }
 
-
-/* 
-	The rest of the radio button styling. See the checkbox styling above, as this works in the same way, 
-	and some of that styling is shared with the radio buttons
-*/
-input[type="radio"]:not(:checked)::before {
-	content: "o )";
+// Seperate stylings for the radio buttons
+input[type="radio"] {
+	
+	margin-right: 1.5em; //Without this, the radio button overlaps the label
+	
+	&:not(:checked)::before {
+		content: "o )";
+	}
+	
+	&:checked::before {
+		content: "+ )";
+	}
+	
+	&::after {
+		content: ")";
+		visibility: visible;
+	}
 }
 
-input[type="radio"]:checked::before {
-	content: "+ )";
-}
-
-input[type="radio"]::after {
-	content: ")";
-	visibility: visible;
+// Seperate stylings for the checkboxes
+input[type="checkbox"] {
+	
+	&::before {
+		content: "x ]";
+	}
+	
+	&::after {
+		content: "]";
+		visibility: visible;
+	}
 }
 
 .radioButtonSelection h4 {
@@ -157,23 +153,23 @@ button[type="submit"] {
 	border-width: 0;
 	outline: none;
 	background-color: unset;
-}
-
-button[type="submit"]:hover {
-	text-decoration: underline;
-	cursor: pointer;
-}
-
-button[type="submit"]:active {
-	font-weight: normal;
-}
-
-button[type="submit"]::before {
-	content: "[ ";
-}
-
-button[type="submit"]::after {
-	content: " ]";
+	
+	&:hover {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	
+	&:active {
+		font-weight: normal;
+	}
+	
+	&::before {
+		content: "[ ";
+	}
+	
+	&::after {
+		content: " ]";
+	}
 }
 
 
