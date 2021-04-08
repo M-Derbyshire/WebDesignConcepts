@@ -1,0 +1,13 @@
+{
+  "name": "type_only",
+  "version": "1.0.0",
+  "description": "A concept web-design for a type-only website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"build": "sass ./styles/main.scss ./bundle.min.css --style=compressed",
+	"watch": "sass --watch ./styles/main.scss:bundle.min.css"
+  },
+  "author": "Matthew Stuart Derbyshire",
+  "license": "ISC"
+}
