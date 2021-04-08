@@ -1,14 +1,16 @@
 footer {
 	margin: 10vh 10vw 5vh 10vw;
 	text-align: center;
-}
-
-.footerText {
-	font-weight: bold;
-	font-size: small;
-}
-
-footer a {
-	display: inline-block;
-	margin: 0.5em;
+	
+	//Links
+	a {
+		display: inline-block;
+		margin: 0.5em;
+	}
+	
+	//Other regular text
+	span {
+		font-weight: bold;
+		font-size: small;
+	}
 }
