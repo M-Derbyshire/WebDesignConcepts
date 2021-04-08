@@ -1,5 +1,7 @@
-// Imports of all the SASS we want to bundle
+// Set variables
+$interactionHoverColor: #888;
 
+// Imports of all the SASS we want to bundle
 @import "type";
 @import "list";
 @import "form";

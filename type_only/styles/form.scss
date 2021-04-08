@@ -96,7 +96,7 @@ input[type="checkbox"]:not(:checked)::first-letter, input[type="radio"]:not(:che
 }
 
 input[type="checkbox"]:not(:checked):hover::first-letter, input[type="radio"]:not(:checked):hover::first-letter {
-	color: #888;
+	color: $interactionHoverColor;
 }
 
 input[type="checkbox"]::before {
