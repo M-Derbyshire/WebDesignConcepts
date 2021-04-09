@@ -194,7 +194,7 @@ button[type="submit"] {
 }
 
 
-@media (max-width: 325px) {
+@media (max-width: $extraSmallScreenWidth) {
 	
 	/* 
 		On Galaxy Fold, the md-developer.uk label was 

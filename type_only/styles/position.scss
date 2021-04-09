@@ -36,7 +36,7 @@ textarea {
 
 
 /* Smaller screen adjustments */
-@media (max-width: 650px) {
+@media (max-width: $smallScreenWidth) {
 	
 	header {
 		padding-left: 1em;
