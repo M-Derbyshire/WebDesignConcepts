@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
 	//We only want to check the first element, as they will be in document order, 
 	//and then we remove it. (May need to adapt this if using for more complex pages.)
 	const checkAndTriggerClassRemoval = (elems) => {
-		if(isElementInVerticalPosition(elems[0]))
+		if(elems[0] && isElementInVerticalPosition(elems[0]))
 		{
 			elems[0].classList.remove(classToRemove);
 			elems.shift();
