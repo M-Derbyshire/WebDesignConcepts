@@ -11,7 +11,7 @@ html, body {
 // Don't animate if on smaller screens
 @media (min-device-width: $smallScreenWidth) {
 	.preFadeInTransform {
-		transform: translate(50vw);
+		transform: translate(25vw);
 		opacity: 0;
 	}
 	
