@@ -1,0 +1,17 @@
+html, body {
+	// We need to remove the overflow so that a scrollbar isn't
+	// displayed (caused by elements being transformed off screen).
+	// Also setting max-width, as otherwise we follow the first 
+	// element on it's movement, rather than watching it.
+	overflow-x: hidden;
+	max-width: 100%;
+}
+
+.preFadeInTransform {
+	transform: translate(50vw);
+	opacity: 0;
+}
+
+.fadeInArea {
+	transition: all 1.15s ease;
+}
