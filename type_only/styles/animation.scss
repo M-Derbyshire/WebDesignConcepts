@@ -7,11 +7,15 @@ html, body {
 	max-width: 100%;
 }
 
-.preFadeInTransform {
-	transform: translate(50vw);
-	opacity: 0;
-}
 
-.fadeInArea {
-	transition: all 1.15s ease;
+// Don't animate if on smaller screens
+@media (min-device-width: $smallScreenWidth) {
+	.preFadeInTransform {
+		transform: translate(50vw);
+		opacity: 0;
+	}
+	
+	.fadeInArea {
+		transition: all 1.15s ease;
+	}
 }
