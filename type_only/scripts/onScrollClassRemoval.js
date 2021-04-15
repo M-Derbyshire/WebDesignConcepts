@@ -2,6 +2,8 @@ window.addEventListener("load", () => {
 	
 	const classToRemove = "preFadeInTransform";
 	const smallScreenWidthPx = 650; //(Does not have to be the same as Sass variable $smallScreenWidth)
+	const fadeInTriggerPosition = 
+						(window.innerHeight / 4) * 3; //The vertical position where fade-ins are triggered
 	
 	
 	//Only set up the scroll event listener on larger screens
@@ -10,7 +12,7 @@ window.addEventListener("load", () => {
 		
 		const isElementInVerticalPosition = (elem) => {
 			const elemBoundaries = elem.getBoundingClientRect();
-			return (elemBoundaries.top <= (window.innerHeight / 4) * 3);
+			return (elemBoundaries.top <= fadeInTriggerPosition);
 		};
 		
 		
