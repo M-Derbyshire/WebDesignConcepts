@@ -83,44 +83,44 @@
 				-->
 				<div class="inputArea">
 					<label for="name">Name: </label>
-					<div class="textInputWrapper"><input type="text" id="name" name="name" /></div>
+					<div class="textInputWrapper"><input type="text" id="name" name="name" tabindex="1" /></div>
 				</div>
 				
 				<div class="inputArea">
 					<label for="description">Description: </label><br />
 					<div class="textareaWrapper">
-						<textarea id="description" name="description" rows="10" placeholder="Text Area"></textarea>
+						<textarea id="description" name="description" rows="10" placeholder="Text Area" tabindex="2"></textarea>
 					</div>
 				</div>
 				
 				<div class="inputArea checkboxArea">
 					<label for="subscribe">Subscribe?: </label>
-					<input type="checkbox" id="subscribe" name="subscribe" value="subscribed" />
+					<input type="checkbox" id="subscribe" name="subscribe" value="subscribed" tabindex="3" />
 				</div>
 				
-				<div class="inputArea radioButtonSelection">
+				<div class="inputArea radioButtonSelection" role="radiogroup">
 					
 					<h4>Where did you find us?</h4>
 					
-					<input type="radio" name="whereDidYouFindUs" id="foundOnFacebook" value="facebook" checked />
+					<input type="radio" name="whereDidYouFindUs" id="foundOnFacebook" value="facebook" checked  tabindex="4" />
 					<label for="foundOnFacebook">Facebook</label>
 					<br/>
 					
-					<input type="radio" name="whereDidYouFindUs" id="foundOnTwitter" value="twitter" />
+					<input type="radio" name="whereDidYouFindUs" id="foundOnTwitter" value="twitter" tabindex="-1" />
 					<label for="foundOnTwitter">Twitter</label>
 					<br/>
 					
-					<input type="radio" name="whereDidYouFindUs" id="foundOnMddev" value="mddev" />
+					<input type="radio" name="whereDidYouFindUs" id="foundOnMddev" value="mddev" tabindex="-1" />
 					<label for="foundOnMddev">MD-Developer.uk</label>
 					<br/>
 					
-					<input type="radio" name="whereDidYouFindUs" id="foundOnOther" value="other" />
+					<input type="radio" name="whereDidYouFindUs" id="foundOnOther" value="other" tabindex="-1" />
 					<label for="foundOnOther">Other</label>
 					<br/>
 				</div>
 				
 				<div class="inputArea">
-					<button type="submit">Submit Form</button>
+					<button type="submit" tabindex="5">Submit Form</button>
 				</div>
 				
 			</form>
