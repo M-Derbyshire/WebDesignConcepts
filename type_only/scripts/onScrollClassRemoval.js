@@ -29,11 +29,24 @@ window.addEventListener("load", () => {
 		
 		const elemsWithClass = Array.from(document.getElementsByClassName(classToRemove));
 		
-		//We want to check the first element before the first scroll, in case it's already 
-		//in position.
+		
 		if(elemsWithClass.length > 0)
 		{
-			checkAndTriggerClassRemoval(elemsWithClass);
+			//We want to check the elements before the first scroll, in case they're already 
+			//in position.
+			
+			//The check/remove func only tests the first element, so we want 
+			//to pass it in multiple times.
+			for(let i = 0, len = elemsWithClass.length; i < len; i++)
+			{
+				checkAndTriggerClassRemoval(elemsWithClass);
+				
+				if(len > elemsWithClass.length) //If an element has been removed
+				{
+					i--;
+					len = elemsWithClass.length;
+				}
+			}
 			
 			window.addEventListener("scroll", () => {
 				checkAndTriggerClassRemoval(elemsWithClass);
