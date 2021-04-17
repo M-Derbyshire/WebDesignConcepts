@@ -9,7 +9,10 @@ window.addEventListener("load", () => {
 	
 	const radioGroups = document.getElementsByClassName(radioGroupsClassName);
 	
-	//Setup event listeners for our radios to call
+	//Setup event listeners for our radios to call.
+	//We also want to run the change first, to make sure the selected
+	//radio has the tabindex (this might not be the case, if the user
+	//has used the back button to get to this page).
 	for(let radioGroupIter = 0, radioGroupLen = radioGroups.length; radioGroupIter < radioGroupLen; radioGroupIter++)
 	{
 		const radios = radioGroups[radioGroupIter].querySelectorAll('input[type=radio]');
@@ -18,20 +21,27 @@ window.addEventListener("load", () => {
 		//When we find the right tabindex, set the tabindex
 		//for the group to that (just leave as -1 if there isn't one).
 		//None-selected radios need to have -1.
+		const tabIndexSetter = () => {
+			
+			for(let eRadioIter = 0, eRadioLen = radios.length; eRadioIter < eRadioLen; eRadioIter++)
+			{
+				radios[eRadioIter].tabIndex = (radios[eRadioIter].checked) ? groupRadioTabIndex : -1;
+			}
+		}
+		
+			
 		for(let radioIter = 0, radioLen = radios.length; radioIter < radioLen; radioIter++)
 		{
 			
 			if(radios[radioIter].tabIndex !== -1) groupRadioTabIndex = radios[radioIter].tabIndex;
 			
 			radios[radioIter].addEventListener("change", () => {
-				
-				for(let eRadioIter = 0, eRadioLen = radios.length; eRadioIter < eRadioLen; eRadioIter++)
-				{
-					radios[eRadioIter].tabIndex = (radios[eRadioIter].checked) ? groupRadioTabIndex : -1;
-				}
-				
+				tabIndexSetter();
 			});
 		}
+		
+		
+		tabIndexSetter(); //Initial run
 	}
 	
 });
