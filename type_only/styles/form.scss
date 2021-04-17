@@ -130,7 +130,6 @@ input[type="radio"] {
 	
 	&::after {
 		content: ")";
-		visibility: visible;
 	}
 }
 
@@ -143,7 +142,6 @@ input[type="checkbox"] {
 	
 	&::after {
 		content: "]";
-		visibility: visible;
 	}
 }
 
