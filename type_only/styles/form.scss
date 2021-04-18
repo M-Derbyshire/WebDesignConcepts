@@ -41,24 +41,33 @@ input[type="text"] {
 	in type. Unfortunately, the left/right are coupled to the text areas rows value, 
 	however this can be decoupled with JS in the future
 */
-textarea {
-	border-width: 0;
-	font-family: courierPrime;
-	resize: none;
-	
-	&:focus {
-		outline: none;
-	}
-}
-
 .textareaWrapper {
 	font-weight: bold;
 	display: inline-block;
+	margin-top: 0.5em;
+	
+	& textarea {
+		border-width: 0;
+		font-family: courierPrime;
+		resize: none;
+		
+		//There were some issues with the height of the textarea not matching the 
+		//height of the ::before/::after on firefox. These solve that (the overflow 
+		//one takes out extra space reserved for the scroll bar)
+		overflow-x: hidden;
+		line-height: 1em;
+		font-size: 1em;
+		
+		&:focus {
+			outline: none;
+		}
+	}
 	
 	&::before, &::after {
 		content: "+\A\A\A\A\A\A\A\A\A+";
 		white-space: pre;
 		display: inline-block;
+		line-height: 1.1em; //Also part of the firefox work-around (mentioned above in textarea styles)
 	}
 }
 
