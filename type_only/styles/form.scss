@@ -73,6 +73,8 @@ input[type="checkbox"], input[type="radio"] {
 	// You can't tab into a hidden or not-displayed element, so putting these behind 
 	// their psuedo-elements (which are what we actually want to display) instead
 	z-index: -1;
+	-moz-appearance:initial; // Hack for Firefox Browsers 
+							// (otherwise they wont display psuedo-elements as inputs don't have content)
 	
 	font-family: courierPrime;
 	font-weight: bold;
