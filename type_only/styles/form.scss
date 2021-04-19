@@ -123,6 +123,12 @@ input[type="checkbox"], input[type="radio"] {
 		//(Can't do this with display or visibilty, as actual input needs to be tab-able)
 		z-index: 0;
 		background-color: white;
+		
+		//On some mobile devices, the checkbox/radio-buttons were poking out from behind these 
+		//psudeo-elements on the left-side and the top a little. This has solved the issue.
+		position: relative;
+		left: -2px;
+		top: -2px;
 	}
 }
 
