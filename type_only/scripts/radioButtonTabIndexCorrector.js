@@ -2,6 +2,9 @@
 //radio-button group. However, if the radio with the tab-index isn't selected, it
 //want be tabbed to. Therefore, we want to always apply the tabindex to the selcted
 //button.
+
+//This will create a closure for each group of radio buttons. Each closure will 
+//have access to every radio-button in the group, and to the group's tabindex number.
 window.addEventListener("load", () => {
 	
 	const radioGroupsClassName = "radioButtonSelection";
