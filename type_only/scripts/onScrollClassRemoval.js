@@ -35,7 +35,7 @@ window.addEventListener("load", () => {
 			//We want to check the elements before the first scroll, in case they're already 
 			//in position.
 			
-			//The check/remove func only tests the first element, so we want 
+			//The check/remove func only tests the first element (for performance), so we want 
 			//to pass it in multiple times.
 			for(let i = 0, len = elemsWithClass.length; i < len; i++)
 			{

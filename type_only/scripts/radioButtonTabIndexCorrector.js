@@ -23,6 +23,9 @@ window.addEventListener("load", () => {
 		//None-selected radios need to have -1.
 		const tabIndexSetter = () => {
 			
+			//By the time this method is ran (in event listener, or intially) the groupRadioTabIndex
+			//variable for this radio group will have been set, which is what is being referenced to here.
+			
 			for(let eRadioIter = 0, eRadioLen = radios.length; eRadioIter < eRadioLen; eRadioIter++)
 			{
 				radios[eRadioIter].tabIndex = (radios[eRadioIter].checked) ? groupRadioTabIndex : -1;
